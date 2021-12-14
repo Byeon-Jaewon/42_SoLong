@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   map_counting_element.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbyeon <jbyeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 15:30:32 by jbyeon            #+#    #+#             */
-/*   Updated: 2021/12/14 23:27:32 by jbyeon           ###   ########.fr       */
+/*   Created: 2021/12/14 18:01:01 by jbyeon            #+#    #+#             */
+/*   Updated: 2021/12/14 18:15:41 by jbyeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	main(int argc, char **argv)
+int	map_counting_element(t_game *game)
 {
-	t_game	*game;
-
-	game = init_game();
-	if (game == NULL)
-		return (FALSE);
-	game->img = init_img();
-	if (game->img == NULL)
-		return (FALSE);
-	if (parse(argc, argv[1], game) == FALSE)
-		return (FALSE);
+	if (game->player->x == -1)
+		return (error("[map]Not found player."));
+	else if (game->collection_count == 0)
+		return (error("[map]Not found collection."));
+	else if (game->exit_count == 0)
+		return (error("[map]Not found exit."));
 	return (TRUE);
 }
