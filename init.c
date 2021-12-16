@@ -6,7 +6,7 @@
 /*   By: jbyeon <jbyeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:43:14 by jbyeon            #+#    #+#             */
-/*   Updated: 2021/12/14 18:11:13 by jbyeon           ###   ########.fr       */
+/*   Updated: 2021/12/14 23:44:17 by jbyeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_game	*init_game(void)
 	game->collection_count = 0;
 	game->exit_count = 0;
 	game->matrix = NULL;
-	game->bottom = NULL;
+	game->floor = NULL;
 	game->wall = NULL;
 	game->collection = NULL;
 	game->exit = NULL;
