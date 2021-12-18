@@ -6,7 +6,7 @@
 /*   By: jbyeon <jbyeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:33:41 by jbyeon            #+#    #+#             */
-/*   Updated: 2021/12/16 11:30:59 by jbyeon           ###   ########.fr       */
+/*   Updated: 2021/12/18 20:54:50 by jbyeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <fcntl.h>
-# include <stdio.h>
 
 # include "libft/libft.h"
 # include "mlx_linux/mlx.h"

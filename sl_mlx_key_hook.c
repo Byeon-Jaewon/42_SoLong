@@ -6,7 +6,7 @@
 /*   By: jbyeon <jbyeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 19:29:26 by jbyeon            #+#    #+#             */
-/*   Updated: 2021/12/16 11:39:28 by jbyeon           ###   ########.fr       */
+/*   Updated: 2021/12/18 20:54:28 by jbyeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ int	key_hook(int key, t_game *game)
 {
 	if (game->matrix[game->player->y - 1][game->player->x]
 		!= WALL && key == KEY_W)
-	{
-		printf("press W.\n");
 		game->player->y -= 1;
-	}
 	else if (game->matrix[game->player->y][game->player->x - 1]
 		!= WALL && key == KEY_A)
 		game->player->x -= 1;

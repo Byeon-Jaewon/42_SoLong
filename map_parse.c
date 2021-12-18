@@ -6,12 +6,11 @@
 /*   By: jbyeon <jbyeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:39:34 by jbyeon            #+#    #+#             */
-/*   Updated: 2021/12/14 23:01:17 by jbyeon           ###   ########.fr       */
+/*   Updated: 2021/12/18 20:55:44 by jbyeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include <stdio.h>
 
 int	map_is_ber(char *map)
 {
@@ -37,6 +36,5 @@ int	parse(int argc, char *file, t_game *game)
 		return (FALSE);
 	if (map_counting_element(game) != TRUE)
 		return (FALSE);
-	printf("parse clear.\n");
 	return (TRUE);
 }
