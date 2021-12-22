@@ -6,7 +6,7 @@
 /*   By: jbyeon <jbyeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 23:31:14 by jbyeon            #+#    #+#             */
-/*   Updated: 2021/12/18 20:55:13 by jbyeon           ###   ########.fr       */
+/*   Updated: 2021/12/21 17:46:48 by jbyeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,5 @@ int	sl_mlx_main(t_game *game)
 	init_exit_img(game);
 	init_coll_img(game);
 	main_loop(game);
-	while (1);
 	return (TRUE);
 }

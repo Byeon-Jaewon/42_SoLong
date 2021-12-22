@@ -6,7 +6,7 @@
 /*   By: jbyeon <jbyeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 17:15:13 by jbyeon            #+#    #+#             */
-/*   Updated: 2021/12/14 23:34:50 by jbyeon           ###   ########.fr       */
+/*   Updated: 2021/12/21 16:55:07 by jbyeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,29 @@ int	check_player(int x, char *line, t_game *game)
 	return (TRUE);
 }
 
+int	check_element(char *line)
+{
+	int	i;
+
+	i = 0;
+	while (line[i])
+	{
+		if (line[i] != WALL && line[i] != FLOOR && line[i] != EXIT && line[i]
+			!= COLLECT && line[i] != PLAYER)
+			return (FALSE);
+		i++;
+	}
+	return (TRUE);
+}
+
 int	check_line_element(int x, char *line, t_game *game)
 {
 	if (map_is_walled(x, line, game) == FALSE)
 		return (error("[map]map is not walled."));
 	if (check_player(x, line, game) == FALSE)
 		return (error("[map]invalid number of player."));
+	if (check_element(line) == FALSE)
+		return (error("[map]invalid element."));
 	game->collection_count += ft_strcount(line, 'C');
 	game->exit_count += ft_strcount(line, 'E');
 	return (TRUE);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbyeon <jbyeon@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: jbyeon <jbyeon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:46:42 by jbyeon            #+#    #+#             */
-/*   Updated: 2021/12/18 20:53:28 by jbyeon           ###   ########.fr       */
+/*   Updated: 2021/12/19 14:08:11 by jbyeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,5 @@ int	close_game(t_game *game)
 	if (game->win)
 		mlx_destroy_window(game->mlx, game->win);
 	free_game(game);
-	while (1);
 	exit(1);
 }
